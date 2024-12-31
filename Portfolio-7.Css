@@ -1,0 +1,538 @@
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html{
+    line-height: 1.15;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    background-color: #fff;
+}
+
+/*-------------Navbar-----------Start-----------*/
+.navbar{
+    box-shadow:  var(--box-shadow);
+    z-index: 1000;
+  }
+  
+  .navbar-brand{
+      font-size: 24px;
+      font-weight: 700;
+      cursor: default;
+  }
+  .navbar-nav .nav-link{
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--c-brand);
+  }
+  
+  .navbar-nav .nav-link.active{
+      color: var(--c-brand);
+  }
+  .btn{
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+      border-radius: 10px;
+      padding: 10px 15px;
+  }
+
+  .btn-brand{
+    background-color: #000; 
+    transition: 0.3s;
+  }
+  
+  .btn-brand:hover{
+      background-color: #ff004f;
+      border-radius: 0;
+  }
+  /*-------------Navbar-----------End-----------*/
+
+
+
+ /*---------Hero--------Area---------Start-----------*/
+ #hero{
+    background: linear-gradient(#00000058, #b24e6e), url(Img/Home-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+  }
+ /*---------Hero--------Area---------End-----------*/ 
+
+
+
+ /*---------About---------Section--------Start----------*/ 
+ .btn-about-1{
+    background-color: #1e90ff;
+    color: white;
+    transition: 0.5s;
+ }
+
+ .btn-about-1:hover{
+    background: #b24e6e;
+    color: #000;
+
+ }
+ .btn-about:hover{
+   color: #b24e6e;
+ }
+
+ .btn-about-2{
+    background: #20b2aa;
+    color: white;
+    transition: 0.5s;
+ }
+
+ .btn-about-2:hover{
+    background: green;
+ }
+  /*---------About---------Section--------End----------*/ 
+
+
+
+/*-------------Skills-----------Section-----------Start--------------*/
+.skill-box{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 50px;
+    background: #fff;
+    margin: 20px;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(60,64,67,0.3) 0px 1px 20px 0px,
+                rgba(60,64,67,0.15) 0px 2px 6px 2px;
+    margin-left: 10%;
+}
+
+.skill-box .left-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-box h2{
+   font-size: 20px;
+   font-family: sans-serif;
+   font-weight: 700;
+   color: #ff004f;
+   text-decoration: underline;
+}
+
+.skill-box .right-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.right-box h2{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ff004f;
+    text-decoration: underline;
+ }
+
+.skill-box .bar{
+    width: 100%;
+    margin: 20px 0;
+
+}
+
+.skill-box .bar:first-child{
+   margin-top: 0; 
+}
+
+.skill-box .bar .info,span{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.skill-box .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #696363;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;/*---*/
+    animation: animate 3s  /*--cubic-bezier(1,0,0.5,1)--*/linear infinite;
+}
+
+.skill-box .progress-line span{
+    height: 100%;
+    background-color: #ff004f;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+
+    transform-origin: left;/*---*/
+
+    animation: animate 3s 3s linear infinite;
+}
+
+@keyframes animate{
+ 100%{
+    transform: scaleX(1);
+ }
+}
+/*-------Left---Main---Start---*/
+.skill-box .progress-line.html span{
+    width: 90%;
+}
+
+.skill-box .progress-line.css span{
+    width: 80%;
+}
+
+.skill-box .progress-line.boot span{
+    width: 70%;
+}
+
+.skill-box .progress-line.js span{
+    width: 75%;
+}
+
+.skill-box .progress-line.word span{
+    width: 90%;
+}
+/*-------Left---Main---End-----*/
+
+
+
+/*-------Right---Main---Start---*/
+.skill-box .progress-line.mon span{
+    width: 90%;
+}
+
+.skill-box .progress-line.rec span{
+    width: 80%;
+}
+
+.skill-box .progress-line.nood span{
+    width: 70%;
+}
+
+.skill-box .progress-line.ang span{
+    width: 75%;
+}
+
+.skill-box .progress-line.lra span{
+    width: 90%;
+}
+/*-------Right---Main---End---*/
+
+
+
+.skill-box .progress-line span::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-top-color: #000;
+}
+
+.skill-box .progress-line span::after{
+    position: absolute;
+    right: -12px;
+    top: -28px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 1px 8px;
+    animation: showText2 0.5s 1.5s linear infinite;
+}
+ 
+
+
+/*-------Left---Proggress---Number-----Start------*/
+.skill-box .progress-line.mon span::after{
+    content: '90%';
+}
+
+.skill-box .progress-line.rec span::after{
+    content: '80%';
+}
+
+.skill-box .progress-line.nood span::after{
+    content: '70%';
+}
+
+.skill-box .progress-line.ang span::after{
+    content: '75%';
+}
+
+.skill-box .progress-line.lra span::after{
+    content: '90%';
+}
+/*-------Left----Proggress---Number----End-----*/
+
+
+
+/*-------Right---Proggress---Number-----Start------*/
+.skill-box .progress-line.html span::after{
+    content: '90%';
+}
+
+.skill-box .progress-line.css span::after{
+    content: '80%';
+}
+
+.skill-box .progress-line.boot span::after{
+    content: '70%';
+}
+
+.skill-box .progress-line.js span::after{
+    content: '75%';
+}
+
+.skill-box .progress-line.word span::after{
+    content: '90%';
+}
+/*-------Right---Proggress---Number-----Start------*/
+
+
+@media screen and (max-width: 1100px) {
+    .skill-box{
+        grid-template-columns: 1fr;
+       
+    }
+
+    .left-box h2{
+        text-align: center;
+       }
+
+    .right-box h2{
+      text-align: center;
+     }
+
+}
+/*-------------Skills-----------Section-----------End---------------*/
+
+
+
+
+/*-------------Education-----------Section-----------Start--------------*/
+  .md-4{
+    color: forestgreen;
+    text-decoration: underline;
+  }
+  .ex-me{
+    margin-top: 35px;
+  }
+/*-------------Education-----------Section-----------End--------------*/
+
+
+
+
+/*-------------Services-----------Section-----------Start--------------*/
+ .card-body i{
+    font-size: 50px;
+    color: yellow;
+}
+
+ .card-title{
+    color: #ff004f;
+    font-family: sans-serif;
+}
+/*-------------Services-----------Section-----------End--------------*/
+
+
+
+
+
+/*-------------Portfolio-----------Section-----------Start--------------*/
+.portfolio-box{
+    box-shadow: 0px 1px 7px pink;
+    padding: 10px;
+}
+
+
+.image-zoom{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom-warpper{
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-warpper img{
+    transition: var(--transition);
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+}
+
+.image-zoom:hover .image-zoom-warpper img{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.text-warning{
+    text-decoration: none;
+}
+/*-------------Portfolio-----------Section-----------End--------------*/
+
+
+
+
+/*-----------Footer----------Section---------Stert------*/
+.footer{
+    background-color: rgb(80, 77, 77);
+    padding: 40px 0;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ff004f;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: .5rem;
+}
+
+.footer-col ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover{
+    color: #ff004f;
+    margin-left: 10px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.footer-col .help-social-icon i{
+    font-size: 25px;
+    color: cyan;
+    margin: 10px;
+}
+
+.footer-col .help-social-icon a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-col .follow-socioa-icon li{
+    font-size: 25px;
+    margin-top: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.footer-col .follow-socioa-icon li i{
+    color: #fff;
+    background-color: #ff004f;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.footer-col .follow-socioa-icon li i:hover{
+    transform: translateY(-10px);
+    border-radius: 0;
+    background-color: #fff;
+    color: #ff004f;
+}
+
+.footer-credit h3{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 50px;
+}
+
+.footer-credit span{
+    color: #ff004f;
+    font-size: 30px;
+}
+
+.footer-credit i{
+    color: #00ffff;
+    font-size: 50px;
+}
+@media screen  and (max-width: 800px){
+    .footer-col{
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4{
+        margin-top: 20px;
+        padding-top: 5px; 
+    }
+}
+
+@media screen  and (max-width: 625px){
+    .footer-col{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer-col{
+        margin-top: 20px;
+        padding-top: 5px; 
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        left: 45%;
+    }
+}
+/*-----------Footer----------Section---------End------*/
